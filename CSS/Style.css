@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+
 * {
   margin: 0;
   padding: 0;
@@ -345,9 +347,9 @@ nav {
 }
 
 #heroTitle{
-  position:absolute;
-  margin-top: 25vh;
-  margin-left: 5vw;
+  position: absolute;
+  margin-top: 1.5vh;
+  margin-left: .5vw;
   padding: 1.5rem;
   color: #FFF;
 }
@@ -359,4 +361,43 @@ nav {
   padding: 1.5rem;
   color: #FFF;
   width:50vw;
+}
+
+/* Animating heroTitle */
+
+#heroTitle {
+  transform: translate(50%);
+  color: #fff;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+  text-decoration: none;
+  cursor: pointer
+}
+#heroTitle:hover {
+  color: #24126A;
+}
+#heroTitle:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -5;
+  left: 50%;
+  bottom: 0;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  opacity: 0;
+  background: #FF2C9C;
+  transition: all 0.3s cubic-bezier(0.42, 0.08, 0, 1.8);
+}
+#heroTitle:hover:after {
+  width: 140%;
+  -webkit-transform: translateX(-50%) skewx(-20deg);
+  -moz-transform: translateX(-50%) skewx(-20deg);
+  -ms-transform: translateX(-50%) skewx(-20deg);
+  transform: translateX(-50%) skewx(-20deg);
+  opacity: 1;
 }
