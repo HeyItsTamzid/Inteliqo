@@ -1103,7 +1103,7 @@
       <div class="parallax-one">
 
         <main>
-          <form action="POST" id="contactForm" class="form" data-netlify="true">
+          <form method="POST" id="contactForm" class="form" data-netlify="true">
             <div class="form__cover"></div>
             <div class="form__loader">
               <div class="spinner active">
@@ -1116,27 +1116,27 @@
             <div class="form__content">
               <h1>Fill out the form</h1>
               <div class="styled-input">
-                <input type="text" class="styled-input__input" name="name">
+                <input id="nameInput" type="text" class="styled-input__input" name="name">
                 <div class="styled-input__placeholder">
                   <span class="styled-input__placeholder-text">Name</span>
                 </div>
                 <div class="styled-input__circle"></div>
               </div>
               <div class="styled-input">
-                <input type="text" class="styled-input__input"  name="email">
+                <input id="emailInput" type="text" class="styled-input__input"  name="email">
                 <div class="styled-input__placeholder">
                   <span class="styled-input__placeholder-text">Email</span>
                 </div>
                 <div class="styled-input__circle"></div>
               </div>
               <div class="styled-input">
-                <textarea cols="30" rows="10" class="styled-input__input" name="message"></textarea>
+                <textarea id="msgInput" cols="30" rows="10" class="styled-input__input" name="message"></textarea>
                 <div class="styled-input__placeholder">
                   <span class="styled-input__placeholder-text" id="msgInput">Message</span>
                 </div>
                 <div class="styled-input__circle"></div>
               </div>
-              <button id="submitBtn" type="button" class="styled-button">
+              <button id="submitBtn" type="submit" class="styled-button">
                 <span class="styled-button__real-text-holder">
                   <span class="styled-button__real-text">Submit</span>
                   <span class="styled-button__moving-block face">

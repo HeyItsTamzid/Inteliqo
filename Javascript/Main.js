@@ -121,16 +121,52 @@ setTimeout(function() {
 }, 1800);
 
 // handling form submit
-$("contactForm").submit(function(e) {
+$("#contactForm").submit(function(e) {
   e.preventDefault();
 
-  var $form = $(this);
-  $.post($form.attr("action"), $form.serialize()).then(function() {
+  let nameInput = document.getElementById("nameInput");
+  let emailInput = document.getElementById("emailInput");
+  let msgInput = document.getElementById("msgInput");
+
+  if (nameInput.value == "" || emailInput.value == "" || msgInput.value == "") {
     Swal.fire({
-      title: "Success",
+      title: "Error",
+      text: "Please fill up all fields.\nThank you",
+      type: "error",
+      confirmButtonText: "Okay"
+    });
+    return false;
+  } else if (!nameInput.value.match(/^[A-Za-z]+$/)) {
+    Swal.fire({
+      title: "Error",
+      text: "Name can not contain letters.\nThank you",
+      type: "error",
+      confirmButtonText: "Okay"
+    });
+    return false;
+  } else if (
+    !emailInput.value.match(
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    )
+  ) {
+    Swal.fire({
+      title: "Error",
+      text: "Please enter a valid email.\nThank you",
+      type: "error",
+      confirmButtonText: "Okay"
+    });
+    return false;
+  } else {
+    Swal.fire({
+      title: "Submitted",
       text: "We will soon contact you.",
       type: "success",
-      confirmButtonText: "Cool"
+      confirmButtonText: "Okay"
     });
-  });
+
+    return true;
+  }
+
+  // var $form = $(this);
+  // $.post($form.attr("action"), $form.serialize()).then(function() {});
 });
