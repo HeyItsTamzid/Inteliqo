@@ -122,8 +122,6 @@ setTimeout(function() {
 
 // handling form submit
 $("#contactForm").submit(function(e) {
-  e.preventDefault();
-
   let nameInput = document.getElementById("nameInput");
   let emailInput = document.getElementById("emailInput");
   let msgInput = document.getElementById("msgInput");
@@ -136,7 +134,9 @@ $("#contactForm").submit(function(e) {
       confirmButtonText: "Okay"
     });
     return false;
-  } else if (!nameInput.value.match(/^[A-Za-z]+$/)) {
+  } else if (
+    !nameInput.value.match(/^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$/)
+  ) {
     Swal.fire({
       title: "Error",
       text: "Name can not contain letters.\nThank you",
@@ -166,7 +166,6 @@ $("#contactForm").submit(function(e) {
 
     return true;
   }
-
   // var $form = $(this);
   // $.post($form.attr("action"), $form.serialize()).then(function() {});
 });
