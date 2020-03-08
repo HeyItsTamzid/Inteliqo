@@ -168,7 +168,7 @@ nav {
 }
 
 .navigation-list a:hover {
-  color: lightcoral;
+  color: #FF2C9C;
 }
 
 #social-links {
@@ -358,6 +358,10 @@ nav {
   font-size: 31px;
   line-height: 15px;
   transition: all 0.6s ease 0s;
+}
+
+.separator span {
+  color: #FF2C9C;
 }
 
 /* why us section starts */
@@ -728,6 +732,10 @@ body.document-loaded .form__cover:before {
   animation: letterAnimIn 0.25s ease forwards;
 }
 
+#msgInput .letter.active {
+  animation: msgBoxAnimIn .25s ease forwards;
+}
+
 .styled-input:hover {
   border-color: rgba(255, 255, 255, 0.4);
 }
@@ -830,6 +838,52 @@ body.document-loaded .form__cover:before {
   100% {
     -webkit-transform: translate(-30px, -27px);
     transform: translate(-30px, -27px);
+    opacity: 1;
+  }
+}
+
+@keyframes msgBoxAnimIn {
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  25% {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 05px);
+    color: red;
+  }
+
+  45% {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+    opacity: 0;
+    color: red;
+  }
+
+  55% {
+    -webkit-transform: translate(0, 10px);
+    transform: translate(0, 10px);
+    opacity: 0;
+  }
+
+  56% {
+    -webkit-transform: translate(-30px, -87px);
+    transform: translate(-30px, -87px);
+    opacity: 0;
+    color: #00ff6b;
+  }
+
+  76% {
+    color: #00ff6b;
+    opacity: 1;
+    -webkit-transform: translate(-30px, -107px);
+    transform: translate(-30px, -107px);
+  }
+
+  100% {
+    -webkit-transform: translate(-30px, -127px);
+    transform: translate(-30px, -127px);
     opacity: 1;
   }
 }
@@ -1275,5 +1329,6 @@ landing page logo and making moto small
     background-color: #24126A;
     border-color: #24126A;
   }
+
 
 }

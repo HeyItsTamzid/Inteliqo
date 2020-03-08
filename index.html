@@ -935,12 +935,12 @@
     <div class="container">
       <div class="row mb-3">
         <div class="col-md-12">
-          <h1 style="color: #24126A;">Our Services</h1>
-          <p class="sub-heading"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequatur, iusto
+          <h1 style="color: #24126A;" class="sectionTitle">Our Services</h1>
+          <p class="sectionSubTitle"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequatur, iusto
             ipsam, inventore eum dicta cumque id beatae magnam sunt neque repellendus dignissimos labore odio cupiditate
             dolorum consectetur, praesentium recusandae? </p>
           <div class="separator">
-            <span class="single-line-middle">-</span>
+            <span>-------</span>
           </div>
         </div>
       </div>
@@ -1021,7 +1021,7 @@
       </div>
 
       <div class="row mb-5">
-        <div class="col-md-6 col-sm-12"><img src="/Assets/Svg/undraw_code_typing_7jnv.svg" alt=""></div>
+        <div class="col-md-6 col-sm-12 mb-3"><img src="/Assets/Svg/undraw_code_typing_7jnv.svg" alt=""></div>
         <div class="col-md-6 col-sm-12 text-left m-auto">
           <h3>Team of highly skilled professionals</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde consequatur consectetur atque
@@ -1035,11 +1035,11 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde consequatur consectetur atque
             inventore corrupti cupiditate, vel saepe natus aliquam veniam cumque est repudiandae accusamus.</p>
         </div>
-        <div class="col-md-6 col-sm-12"><img src="/Assets/Svg/3054071.svg" alt=""></div>
+        <div class="col-md-6 col-sm-12 mb-3"><img src="/Assets/Svg/3054071.svg" alt=""></div>
       </div>
 
       <div class="row mb-5">
-        <div class="col-md-6 col-sm-12"><img src="/Assets/Svg/undraw_make_it_rain_iwk4.svg" alt=""></div>
+        <div class="col-md-6 col-sm-12 mb-3"><img src="/Assets/Svg/undraw_make_it_rain_iwk4.svg" alt=""></div>
         <div class="col-md-6 col-sm-12 text-left m-auto">
           <h3>Best priced deal!</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde consequatur consectetur atque
@@ -1053,11 +1053,11 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde consequatur consectetur atque
             inventore corrupti cupiditate, vel saepe natus aliquam veniam cumque est repudiandae accusamus.</p>
         </div>
-        <div class="col-md-6 col-sm-12"><img src="/Assets/Svg/undraw_discount_d4bd.svg" alt=""></div>
+        <div class="col-md-6 col-sm-12 mb-3"><img src="/Assets/Svg/undraw_discount_d4bd.svg" alt=""></div>
       </div>
 
       <div class="row">
-        <div class="col-md-6 col-sm-12"><img src="/Assets/Svg/299282822.svg" alt=""></div>
+        <div class="col-md-6 col-sm-12 mb-3"><img src="/Assets/Svg/299282822.svg" alt=""></div>
         <div class="col-md-6 col-sm-12 text-left m-auto">
           <h3>24/7 customer support</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere unde consequatur consectetur atque
@@ -1088,10 +1088,12 @@
     <div class="container">
       <div class="row text-center mb-5 container">
         <div class="col-md-12">
-          <h1 style="color: #24126A;">Contact us for any query.</h1>
-          <p class="sub-heading"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis laudantium aperiam nobis. Pariatur, id consectetur. </p>
+          <h1 style="color: #24126A;" class="sectionTitle">Our Services</h1>
+          <p class="sectionSubTitle"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequatur, iusto
+            ipsam, inventore eum dicta cumque id beatae magnam sunt neque repellendus dignissimos labore odio cupiditate
+            dolorum consectetur, praesentium recusandae? </p>
           <div class="separator">
-            <span class="single-line-middle"></span>
+            <span>-------</span>
           </div>
         </div>
       </div>
@@ -1101,7 +1103,7 @@
       <div class="parallax-one">
 
         <main>
-          <form class="form">
+          <form action="POST" id="contactForm" class="form" data-netlify="true">
             <div class="form__cover"></div>
             <div class="form__loader">
               <div class="spinner active">
@@ -1114,27 +1116,27 @@
             <div class="form__content">
               <h1>Fill out the form</h1>
               <div class="styled-input">
-                <input type="text" class="styled-input__input" name="nickname">
+                <input type="text" class="styled-input__input" name="name">
                 <div class="styled-input__placeholder">
-                  <span class="styled-input__placeholder-text">Username</span>
+                  <span class="styled-input__placeholder-text">Name</span>
                 </div>
                 <div class="styled-input__circle"></div>
               </div>
               <div class="styled-input">
-                <input type="text" class="styled-input__input">
+                <input type="text" class="styled-input__input"  name="email">
                 <div class="styled-input__placeholder">
-                  <span class="styled-input__placeholder-text">Password</span>
+                  <span class="styled-input__placeholder-text">Email</span>
                 </div>
                 <div class="styled-input__circle"></div>
               </div>
               <div class="styled-input">
-                <textarea cols="30" rows="10" class="styled-input__input"></textarea>
+                <textarea cols="30" rows="10" class="styled-input__input" name="message"></textarea>
                 <div class="styled-input__placeholder">
-                  <span class="styled-input__placeholder-text">Message</span>
+                  <span class="styled-input__placeholder-text" id="msgInput">Message</span>
                 </div>
                 <div class="styled-input__circle"></div>
               </div>
-              <button type="button" class="styled-button">
+              <button id="submitBtn" type="button" class="styled-button">
                 <span class="styled-button__real-text-holder">
                   <span class="styled-button__real-text">Submit</span>
                   <span class="styled-button__moving-block face">
