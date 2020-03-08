@@ -36,7 +36,7 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
-  transform: translate(-25px, 25px);
+  transform: translate(-15px, 10px);
   z-index: 2;
 }
 
