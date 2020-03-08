@@ -166,21 +166,7 @@ body {
 
 
 /* showCase Section Starts */
-#laptop {
-  animation: laptopFloat 1s ease-in-out infinite alternate;
-  transform-origin: center;
-  transform-box: fill-box;
-}
 
-@keyframes laptopFloat {
-  from {
-    transform: translateY(0px);
-  }
-
-  to {
-    transform: translateY(25px);
-  }
-}
 
 #heroSection {
   position: relative;
@@ -912,6 +898,23 @@ body.document-loaded .form__cover:before {
 /* Media queries for larger screen than 500px */
 @media only screen and (min-width: 480px) {
 
+  /* only animating laptop SVG on larger screen */
+  #laptop {
+    animation: laptopFloat 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  @keyframes laptopFloat {
+    from {
+      transform: translateY(0px);
+    }
+
+    to {
+      transform: translateY(25px);
+    }
+  }
+
   /* removing small normal btn for larger screen */
   #heroBtnSmall {
     display: none;
@@ -1258,9 +1261,18 @@ landing page logo and making moto small
 
   #heroBtnSmall {
     position: absolute;
-    width: 80px;
-    margin-top: 16vh;
-    margin-left: 5vw;
-    font-size: 0.5rem;
+    width: 55px;
+    height: 20px;
+    margin-top: 17vh;
+    margin-left: 5.5vw;
+    font-size: 0.3rem;
+    background-color: #FF2C9C;
+    border-color: #FF2C9C;
+  }
+
+  #heroBtnSmall:hover {
+    color: #FF2C9C;
+    background-color: #24126A;
+    border-color: #24126A;
   }
 }
