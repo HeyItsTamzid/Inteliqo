@@ -1050,10 +1050,16 @@ body.document-loaded .form__cover:before {
   }
 }
 
+/* Footer */
+/* Social Media Icons */
+#socialMediaIcons i:hover {
+  color: #FF2C9C;
+}
+
 
 /* --------------------------------MEDIA QUERY STARTS------------------------------------------------- */
-/* Media queries for larger screen than 768px */
-@media only screen and (min-width: 775px) {
+/* Media queries for larger screen than 1440px */
+@media only screen and (min-width: 1440px) {
 
   /* only animating laptop SVG on larger screen */
   #laptop {
@@ -1125,7 +1131,7 @@ body.document-loaded .form__cover:before {
   /* heroBtn with animation only 
   showing in larger screen */
   #heroBtnContainer button {
-    margin-top: 60vh;
+    margin-top: 650px;
     margin-left: 6vw;
     position: absolute;
     display: inline-block;
@@ -1302,7 +1308,7 @@ body.document-loaded .form__cover:before {
 landing page logo and making moto small
  for smaller screen */
   #heroSubTitle {
-    margin-top: 10vh;
+    margin-top: 165px;
     margin-left: 5vw;
     padding: .5rem;
     font-size: 1.4rem;
@@ -1329,7 +1335,127 @@ landing page logo and making moto small
     font-weight: 450;
     width: 75px;
     height: 30px;
-    margin-top: 18.5vh;
+    margin-top: 245px;
+    margin-left: 5.8vw;
+    font-size: 0.5rem;
+    background-color: #FF2C9C;
+    border-color: #FF2C9C;
+  }
+
+  #heroBtnSmall:hover {
+    color: #FF2C9C;
+    background-color: #24126A;
+    border-color: #24126A;
+  }
+}
+
+/* Media queries for larger screen than 775px and smaller than 1440 */
+
+@media screen and (min-width: 778px) and (max-width: 1440px) {
+
+
+  /* Navbar Media query starts */
+  .navigation-list li {
+    font-size: 32px;
+  }
+
+  @keyframes closeNav {
+    0% {
+      width: calc(100vw - 50px);
+      height: calc(100vh - 50px);
+      border-radius: 5px;
+    }
+
+    25% {
+      width: calc(100vw - 50px);
+      height: calc(100vh - 50px);
+      border-radius: 5px;
+    }
+
+    50% {
+      width: calc(100vw - 50px);
+      height: calc(100vh - 50px);
+      border-radius: 5px;
+    }
+
+    75% {
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+    }
+
+    100% {
+      width: 60px;
+      height: 60px;
+      border-radius: 50px;
+    }
+  }
+
+  @keyframes openNav {
+    0% {
+      width: 60px;
+      height: 60px;
+    }
+
+    25% {
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+    }
+
+    50% {
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+    }
+
+    75% {
+      width: calc(100vw - 50px);
+      height: calc(100vh - 50px);
+      border-radius: 5px;
+    }
+
+    100% {
+      width: calc(100vw - 50px);
+      height: calc(100vh - 50px);
+      border-radius: 5px;
+    }
+  }
+
+  /* Navbar Media query ends */
+
+  /* elimninating animation from 
+landing page logo and making moto small
+ for smaller screen */
+  #heroSubTitle {
+    margin-top: 165px;
+    margin-left: 5vw;
+    padding: .5rem;
+    font-size: 1.4rem;
+  }
+
+  #logo {
+    position: absolute;
+    margin-top: 2vh;
+    margin-left: 5vw;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    font-family: "lobster", sans-serif;
+    color: #fff;
+  }
+
+  /* removing animated herobtn
+  and adding normal btn for smaller screen */
+  #heroBtnContainer {
+    display: none;
+  }
+
+  #heroBtnSmall {
+    position: absolute;
+    font-weight: 450;
+    width: 75px;
+    height: 30px;
+    margin-top: 245px;
     margin-left: 5.8vw;
     font-size: 0.5rem;
     background-color: #FF2C9C;
@@ -1421,7 +1547,7 @@ landing page logo and making moto small
 landing page logo and making moto small
  for smaller screen */
   #heroSubTitle {
-    margin-top: 10vh;
+    margin-top: 85px;
     margin-left: 5vw;
     padding: 0.2rem;
     font-size: 0.6rem;
@@ -1429,7 +1555,7 @@ landing page logo and making moto small
 
   #logo {
     position: absolute;
-    margin-top: 2vh;
+    margin-top: 20px;
     margin-left: 5vw;
     padding: 0.5rem;
     font-size: 1.2rem;
@@ -1448,7 +1574,7 @@ landing page logo and making moto small
     font-weight: 450;
     width: 60px;
     height: 18px;
-    margin-top: 16vh;
+    margin-top: 118px;
     margin-left: 5.5vw;
     font-size: 0.3rem;
     background-color: #FF2C9C;
