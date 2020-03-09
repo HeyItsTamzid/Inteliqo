@@ -1446,9 +1446,9 @@ landing page logo and making moto small
   #heroBtnSmall {
     position: absolute;
     font-weight: 450;
-    width: 65px;
-    height: 20px;
-    margin-top: 15vh;
+    width: 60px;
+    height: 18px;
+    margin-top: 16vh;
     margin-left: 5.5vw;
     font-size: 0.3rem;
     background-color: #FF2C9C;
@@ -1460,4 +1460,5 @@ landing page logo and making moto small
     background-color: #24126A;
     border-color: #24126A;
   }
+
 }
