@@ -166,6 +166,4 @@ $("#contactForm").submit(function(e) {
 
     return true;
   }
-  // var $form = $(this);
-  // $.post($form.attr("action"), $form.serialize()).then(function() {});
 });

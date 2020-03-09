@@ -1038,8 +1038,8 @@ body.document-loaded .form__cover:before {
 
 
 /* --------------------------------MEDIA QUERY STARTS------------------------------------------------- */
-/* Media queries for larger screen than 500px */
-@media only screen and (min-width: 480px) {
+/* Media queries for larger screen than 768px */
+@media only screen and (min-width: 775px) {
 
   /* only animating laptop SVG on larger screen */
   #laptop {
@@ -1210,9 +1210,126 @@ body.document-loaded .form__cover:before {
 
 }
 
+/* Media queries for larger screen than 480px and smaller than 786 */
 
+@media screen and (min-width: 485px) and (max-width: 772px) {
 
-/* Media queries for smaller screen than 500px */
+  /* Navbar Media query starts */
+  .navigation-list li {
+    font-size: 32px;
+  }
+
+  @keyframes closeNav {
+    0% {
+      width: calc(100vw - 50px);
+      height: calc(100vh - 50px);
+      border-radius: 5px;
+    }
+
+    25% {
+      width: calc(100vw - 50px);
+      height: calc(100vh - 50px);
+      border-radius: 5px;
+    }
+
+    50% {
+      width: calc(100vw - 50px);
+      height: calc(100vh - 50px);
+      border-radius: 5px;
+    }
+
+    75% {
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+    }
+
+    100% {
+      width: 60px;
+      height: 60px;
+      border-radius: 50px;
+    }
+  }
+
+  @keyframes openNav {
+    0% {
+      width: 60px;
+      height: 60px;
+    }
+
+    25% {
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+    }
+
+    50% {
+      width: 60px;
+      height: 60px;
+      border-radius: 5px;
+    }
+
+    75% {
+      width: calc(100vw - 50px);
+      height: calc(100vh - 50px);
+      border-radius: 5px;
+    }
+
+    100% {
+      width: calc(100vw - 50px);
+      height: calc(100vh - 50px);
+      border-radius: 5px;
+    }
+  }
+
+  /* Navbar Media query ends */
+
+  /* elimninating animation from 
+landing page logo and making moto small
+ for smaller screen */
+  #heroSubTitle {
+    margin-top: 10vh;
+    margin-left: 5vw;
+    padding: .5rem;
+    font-size: 1.6rem;
+  }
+
+  #logo {
+    position: absolute;
+    margin-top: 2vh;
+    margin-left: 5vw;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    font-family: "lobster", sans-serif;
+    color: #fff;
+  }
+
+  /* removing animated herobtn
+  and adding normal btn for smaller screen */
+  #heroBtnContainer {
+    display: none;
+  }
+
+  #heroBtnSmall {
+    position: absolute;
+    font-weight: 450;
+    width: 75px;
+    height: 30px;
+    margin-top: 18.5vh;
+    margin-left: 5.8vw;
+    font-size: 0.5rem;
+    background-color: #FF2C9C;
+    border-color: #FF2C9C;
+  }
+
+  #heroBtnSmall:hover {
+    color: #FF2C9C;
+    background-color: #24126A;
+    border-color: #24126A;
+  }
+}
+
+/* Media queries for smaller screen than 480px */
 
 @media only screen and (max-width: 480px) {
 
@@ -1329,6 +1446,4 @@ landing page logo and making moto small
     background-color: #24126A;
     border-color: #24126A;
   }
-
-
 }
