@@ -59,6 +59,7 @@ ScrollReveal().reveal(".sectionSubTitle", {
 ScrollReveal().reveal(".leftItem", {
   origin: "left",
   duration: 1500,
+  viewFactor: 0.5,
   distance: "150px",
   reset: false
 });
@@ -67,5 +68,6 @@ ScrollReveal().reveal(".rightItem", {
   origin: "right",
   duration: 1500,
   distance: "150px",
+  viewFactor: 0.5,
   reset: false
 });
