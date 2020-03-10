@@ -10,8 +10,8 @@
 html,
 body {
   overflow-x: hidden;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 300 !important;
 }
 
 h1,
@@ -1059,7 +1059,7 @@ body.document-loaded .form__cover:before {
 
 /* --------------------------------MEDIA QUERY STARTS------------------------------------------------- */
 /* Media queries for larger screen than 1440px */
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1921px) {
 
   /* only animating laptop SVG on larger screen */
   #laptop {
@@ -1092,6 +1092,7 @@ body.document-loaded .form__cover:before {
     transform: translate(50%);
     text-decoration: none;
     cursor: pointer;
+    font-size: 4rem;
   }
 
   #logo:hover {
@@ -1131,8 +1132,8 @@ body.document-loaded .form__cover:before {
   /* heroBtn with animation only 
   showing in larger screen */
   #heroBtnContainer button {
-    margin-top: 650px;
-    margin-left: 6vw;
+    margin-top: 800px;
+    margin-left: 5vw;
     position: absolute;
     display: inline-block;
     cursor: pointer;
@@ -1227,6 +1228,193 @@ body.document-loaded .form__cover:before {
   }
 
   /* heroBtn with animation */
+
+  /* landing page */
+  #heroSubTitle {
+    font-size: 4.5rem;
+    margin-top: 550px;
+    margin-left: 4vw;
+    font-weight: 600;
+  }
+
+}
+
+/* Media queries for larger screen than 1440px */
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+
+  /* only animating laptop SVG on larger screen */
+  #laptop {
+    animation: laptopFloat 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  @keyframes laptopFloat {
+    from {
+      transform: translateY(0px);
+    }
+
+    to {
+      transform: translateY(25px);
+    }
+  }
+
+  /* removing small normal btn for larger screen */
+  #heroBtnSmall {
+    display: none;
+  }
+
+
+  /* logo Media query starts
+   only animating on larger screens */
+  #logo {
+    transform: translate(50%);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 3.2rem;
+  }
+
+  #logo:hover {
+    color: #24126a;
+  }
+
+  #logo:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -5;
+    left: 50%;
+    bottom: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    opacity: 0;
+    background: #ff2c9c;
+    transition: all 0.3s cubic-bezier(0.42, 0.08, 0, 1.8);
+  }
+
+  #logo:hover:after {
+    width: 140%;
+    -webkit-transform: translateX(-50%) skewx(-20deg);
+    -moz-transform: translateX(-50%) skewx(-20deg);
+    -ms-transform: translateX(-50%) skewx(-20deg);
+    transform: translateX(-50%) skewx(-20deg);
+    opacity: 1;
+  }
+
+  /* logo Media query starts*/
+
+
+  /* heroBtn with animation only 
+  showing in larger screen */
+  #heroBtnContainer button {
+    margin-top: 550px;
+    margin-left: 5vw;
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  #heroBtnContainer button.learn-more {
+    width: 12rem;
+    height: auto;
+  }
+
+  #heroBtnContainer button.learn-more .circle {
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: relative;
+    display: block;
+    margin: 0;
+    width: 3rem;
+    height: 3rem;
+    background: #ff2c9c;
+    border-radius: 1.625rem;
+  }
+
+  #heroBtnContainer button.learn-more .circle .icon {
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
+
+  #heroBtnContainer button.learn-more .circle .icon.arrow {
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
+
+  #heroBtnContainer button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.25rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  #heroBtnContainer button.learn-more .button-text {
+    -webkit-transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 0;
+    margin: 0 0 0 1.85rem;
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #heroBtnContainer button:hover .circle {
+    width: 100%;
+  }
+
+  #heroBtnContainer button:hover .circle .icon.arrow {
+    background: #fff;
+    -webkit-transform: translate(1rem, 0);
+    transform: translate(1rem, 0);
+  }
+
+  #heroBtnContainer button:hover .button-text {
+    color: #fff;
+  }
+
+  /* heroBtn with animation */
+
+  /* landing page */
+  #heroSubTitle {
+    font-size: 3.5rem;
+    margin-top: 350px;
+    margin-left: 4vw;
+    font-weight: 600;
+  }
 
 }
 
@@ -1354,10 +1542,29 @@ landing page logo and making moto small
 @media screen and (min-width: 778px) and (max-width: 1440px) {
 
 
+  /* only animating laptop SVG on larger screen */
+  #laptop {
+    animation: laptopFloat 1s ease-in-out infinite alternate;
+    transform-origin: center;
+    transform-box: fill-box;
+  }
+
+  @keyframes laptopFloat {
+    from {
+      transform: translateY(0px);
+    }
+
+    to {
+      transform: translateY(25px);
+    }
+  }
+
+
   /* Navbar Media query starts */
   .navigation-list li {
-    font-size: 32px;
+    font-size: 3.2rem;
   }
+
 
   @keyframes closeNav {
     0% {
@@ -1431,7 +1638,8 @@ landing page logo and making moto small
     margin-top: 165px;
     margin-left: 5vw;
     padding: .5rem;
-    font-size: 1.4rem;
+    font-size: 2rem;
+    font-weight: 600;
   }
 
   #logo {
@@ -1439,7 +1647,7 @@ landing page logo and making moto small
     margin-top: 2vh;
     margin-left: 5vw;
     padding: 0.5rem;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-family: "lobster", sans-serif;
     color: #fff;
   }
@@ -1455,7 +1663,7 @@ landing page logo and making moto small
     font-weight: 450;
     width: 75px;
     height: 30px;
-    margin-top: 245px;
+    margin-top: 270px;
     margin-left: 5.8vw;
     font-size: 0.5rem;
     background-color: #FF2C9C;
@@ -1543,14 +1751,23 @@ landing page logo and making moto small
 
   /* Navbar Media query ends */
 
+
+  /* landing page */
+  #landingPageSvg {
+    width: auto;
+    height: 100vh;
+  }
+
   /* elimninating animation from 
 landing page logo and making moto small
  for smaller screen */
+
   #heroSubTitle {
     margin-top: 85px;
     margin-left: 5vw;
     padding: 0.2rem;
     font-size: 0.6rem;
+    font-weight: 600;
   }
 
   #logo {
